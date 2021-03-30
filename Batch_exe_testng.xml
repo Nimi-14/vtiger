@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+      <class name="Scripts_Contacts.SlectAdminstratorDropTc_9"/>
+      <class name="Scripts_Contacts.ExportContactTc_6"/>
+      <class name="Scripts_Contacts.SelectLeadSourceTc_8"/>
+      <class name="Scripts_Contacts.SelectMarketSaveTc_10"/>
+      <class name="Scripts_Contacts.SelectGroupSupportSaveTc_11"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
