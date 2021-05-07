@@ -10,13 +10,13 @@ import Generics.ExcelUtils;
 
 /**
  * 
- * @author Suhasini
+ * @author Nirmala
  *
  */
-@Listeners(ExtentReport.ListnerImp.class)
+@Listeners(ExtentReport.ListnerImpPgm.class)
 public class ExportContactTc_6 extends Base{
 ExcelUtils exc=new ExcelUtils();
-@Test(groups="smokeTest")
+@Test
 public void createContactTest() throws Throwable {
 	Home_pageTest home = new Home_pageTest(driver);
 	CreateContactPage create = new CreateContactPage(driver);

@@ -18,15 +18,15 @@ import Generics.WebDriverUtils;
 
 /**
  * 
- * @author Suhasini
+ * @author 
  *
  */
-@Listeners(ExtentReport.ListnerImp.class)
+//@Listeners(ExtentReport.ListnerImpPgm.class)
 public class SelectMarketSaveTc_10 extends Base {
 	WebDriverUtils wutil=new WebDriverUtils();
 	ExcelUtils exc=new ExcelUtils();
 
-@Test(groups="smokeTest")
+@Test
 public void contactRadioGroupTest() throws EncryptedDocumentException, IOException{
 	Home_pageTest home = new Home_pageTest(driver);
 	CreateContactPage create = new CreateContactPage(driver);

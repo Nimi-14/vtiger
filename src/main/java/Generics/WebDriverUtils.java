@@ -20,7 +20,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * 
- * @author Suhasini
+ * @author Nirmala
  *
  */
 

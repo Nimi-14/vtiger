@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="0" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="0" started-at="2021-03-21T11:48:17Z" finished-at="2021-03-21T11:48:17Z">
+  <suite name="Default suite" duration-ms="43459" started-at="2021-05-07T11:07:46Z" finished-at="2021-05-07T11:08:29Z">
     <groups>
-      <group name="regressionTest">
-        <method signature="SlectAdminstratorDropTc_9.contactRadioGroupTest()[pri:0, instance:Scripts_Contacts.SlectAdminstratorDropTc_9@3159c4b8]" name="contactRadioGroupTest" class="Scripts_Contacts.SlectAdminstratorDropTc_9"/>
-      </group> <!-- regressionTest -->
-      <group name="smokeTest">
-        <method signature="ExportContactTc_6.createContactTest()[pri:0, instance:Scripts_Contacts.ExportContactTc_6@73846619]" name="createContactTest" class="Scripts_Contacts.ExportContactTc_6"/>
-        <method signature="SelectLeadSourceTc_8.createContactLeadSourceTest()[pri:0, instance:Scripts_Contacts.SelectLeadSourceTc_8@4bec1f0c]" name="createContactLeadSourceTest" class="Scripts_Contacts.SelectLeadSourceTc_8"/>
-        <method signature="SlectAdminstratorDropTc_9.contactUserRadioTest()[pri:0, instance:Scripts_Contacts.SlectAdminstratorDropTc_9@3159c4b8]" name="contactUserRadioTest" class="Scripts_Contacts.SlectAdminstratorDropTc_9"/>
-        <method signature="SelectGroupSupportSaveTc_11.contactGroupDropTest()[pri:0, instance:Scripts_Contacts.SelectGroupSupportSaveTc_11@2ac273d3]" name="contactGroupDropTest" class="Scripts_Contacts.SelectGroupSupportSaveTc_11"/>
-        <method signature="SelectMarketSaveTc_10.contactRadioGroupTest()[pri:0, instance:Scripts_Contacts.SelectMarketSaveTc_10@5383967b]" name="contactRadioGroupTest" class="Scripts_Contacts.SelectMarketSaveTc_10"/>
-      </group> <!-- smokeTest -->
     </groups>
-  </suite> <!-- Suite -->
+    <test name="Default test" duration-ms="43459" started-at="2021-05-07T11:07:46Z" finished-at="2021-05-07T11:08:29Z">
+      <class name="Scripts_Contacts.SelectLeadSourceTc_8">
+        <test-method status="PASS" signature="configure()[pri:0, instance:Scripts_Contacts.SelectLeadSourceTc_8@72d818d1]" name="configure" is-config="true" duration-ms="10991" started-at="2021-05-07T16:37:46Z" finished-at="2021-05-07T16:37:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configure -->
+        <test-method status="PASS" signature="login()[pri:0, instance:Scripts_Contacts.SelectLeadSourceTc_8@72d818d1]" name="login" is-config="true" duration-ms="6996" started-at="2021-05-07T16:37:57Z" finished-at="2021-05-07T16:38:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="createContactLeadSourceTest()[pri:0, instance:Scripts_Contacts.SelectLeadSourceTc_8@72d818d1]" name="createContactLeadSourceTest" duration-ms="22055" started-at="2021-05-07T16:38:04Z" finished-at="2021-05-07T16:38:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContactLeadSourceTest -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:Scripts_Contacts.SelectLeadSourceTc_8@72d818d1]" name="logout" is-config="true" duration-ms="3100" started-at="2021-05-07T16:38:26Z" finished-at="2021-05-07T16:38:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method status="PASS" signature="close()[pri:0, instance:Scripts_Contacts.SelectLeadSourceTc_8@72d818d1]" name="close" is-config="true" duration-ms="284" started-at="2021-05-07T16:38:29Z" finished-at="2021-05-07T16:38:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- Scripts_Contacts.SelectLeadSourceTc_8 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

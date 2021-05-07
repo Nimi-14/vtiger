@@ -8,6 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import com.crm.vtiger.ObjectRepositoryUtils.LoginPageTest;
 
@@ -15,40 +16,33 @@ public class Base {
 	PropertyFileUtils putil = new PropertyFileUtils();
 	WebDriverUtils wutil = new WebDriverUtils();
 	public WebDriver driver;
-	//public EventFiringWebDriver driver;
+//public EventFiringWebDriver driver;
 	public static WebDriver staticDriver;
 	
-@BeforeClass(groups={"smokeTest","regressionTest"})
+	
+@BeforeClass
 public void configure() throws Throwable{
-	
-	System.setProperty("webdriver.gecko.driver", "./Selenium/geckodriver.exe");
-	String url = putil.propFileUtils("url");
-	String browser = putil.propFileUtils("browser");
-	
-	if(browser.equals("firefox")){
-		 driver = new FirefoxDriver();
-	}else if(browser.equals("chrome")){
-		driver = new ChromeDriver();
-	}
-	else{
-		driver = new FirefoxDriver();
-	}
+		System.setProperty("webdriver.chrome.driver", "./Selenium/chromedriver.exe");
+		 driver=new ChromeDriver();
+		 driver.manage().window().maximize();
+		String url = putil.propFileUtils("url");
+		
 	
 	wutil.waitForPageToLoad(driver);
 	driver.get(url);
 }
 	
-@BeforeMethod(groups={"smokeTest","regressionTest"})
+@BeforeMethod
 public void login() throws Throwable{
 	LoginPageTest login = new LoginPageTest(driver);
 	WebElement user = login.getLoginUsername();
-	user.sendKeys(putil.propFileUtils("username"));
+	user.sendKeys(putil.propFileUtils("userName"));
 	WebElement pwd = login.getLoginPassword();
 	pwd.sendKeys(putil.propFileUtils("password"));
 	login.getLoginButton().click();
 }
 
-@AfterMethod(groups={"smokeTest","regressionTest"})
+@AfterMethod
 	public void logout(){
 		LoginPageTest lout = new LoginPageTest(driver);
 		WebElement log=lout.getLogoutbtn();
@@ -56,9 +50,9 @@ public void login() throws Throwable{
 		lout.getSignout().click();
 	}
 
-@AfterClass(groups={"smokeTest","regressionTest"})
+@AfterClass
 public void close(){
 	driver.close();
-  }
+  }  
 }
 

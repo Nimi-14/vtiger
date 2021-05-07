@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 /**
  * 
- * @author Suhasini
+ * @author Nirmala
  *
  */
 
@@ -18,7 +18,8 @@ public class Home_pageTest {
 @FindBy(xpath="//table[@cellspacing='0']/tbody/tr[1]/td[8]/a")
 private WebElement ContactLink;
 
-@FindBy(xpath="//table[@cellspacing='0']/tbody/tr[1]/td[1]/a/img[@alt='Create Contact...']")
+//@FindBy(xpath="//table[@cellspacing='0']/tbody/tr[1]/td[1]/a/img[@alt='Create Contact...']")
+@FindBy(xpath="//img[@title='Create Contact...']")
 private WebElement createPlusButton;
 
 @FindBy(xpath="//table[@class='lvt small']/tbody/tr[3]/td[4]/a")

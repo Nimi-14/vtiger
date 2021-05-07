@@ -17,14 +17,14 @@ import Generics.WebDriverUtils;
 
 /**
  * 
- * @author Suhasini
+ * @author Nirmala
  *
  */
-@Listeners(ExtentReport.ListnerImp.class)
+//@Listeners(ExtentReport.ListnerImpPgm.class)
 public class SlectAdminstratorDropTc_9  extends Base {
 	WebDriverUtils wutil=new WebDriverUtils();
 	ExcelUtils exc=new ExcelUtils();
-@Test(groups="smokeTest")
+@Test
 public void contactUserRadioTest() throws EncryptedDocumentException, IOException{
 	
 	Home_pageTest home = new Home_pageTest(driver);
@@ -47,7 +47,7 @@ public void contactUserRadioTest() throws EncryptedDocumentException, IOExceptio
 
   }
 
-@Test(groups="regressionTest")
+@Test
 public void contactRadioGroupTest() throws EncryptedDocumentException, IOException{
 	Home_pageTest home = new Home_pageTest(driver);
 	CreateContactPage create = new CreateContactPage(driver);

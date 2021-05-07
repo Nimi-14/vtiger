@@ -10,7 +10,7 @@ import Generics.WebDriverUtils;
 
 /**
  * 
- * @author Suhasini
+ * @author Nirmala
  *
  */
 public class LoginPageTest {

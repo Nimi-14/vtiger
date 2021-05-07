@@ -14,20 +14,20 @@ import Generics.WebDriverUtils;
 
 /**
  * 
- * @author Suhasini
+ * @author 
  *
  */
 
 public class SelectGroupSupportSaveTc_11 extends Base {
 	WebDriverUtils wutil=new WebDriverUtils();
 	ExcelUtils exc=new ExcelUtils();
-@Test(groups="smokeTest")
+@Test
 public void contactGroupDropTest() throws EncryptedDocumentException, IOException{
 	Home_pageTest home = new Home_pageTest(driver);
 	CreateContactPage create = new CreateContactPage(driver);
 	
 	//click on contact link
-	home.getcontactLink();
+	home.getcontactLink().click();;
 	
 	//click on create plus button
 	home.getcreatePlusButton().click();

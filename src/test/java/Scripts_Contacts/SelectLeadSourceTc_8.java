@@ -14,21 +14,21 @@ import Generics.WebDriverUtils;
 
 /**
  * 
- * @author Suhasini
+ * @author Nirmala
  *
  */
 
 public class SelectLeadSourceTc_8 extends Base{
 	WebDriverUtils wutil=new WebDriverUtils();
 	ExcelUtils exc=new ExcelUtils();
-@Test(groups="smokeTest")
-public void createContactLeadSourceTest() throws EncryptedDocumentException, IOException{
+@Test
+public void createContactLeadSourceTest() throws EncryptedDocumentException, IOException, InterruptedException{
 	
 	Home_pageTest home = new Home_pageTest(driver);
 	CreateContactPage create = new CreateContactPage(driver);
-	
+	Thread.sleep(2000);
 	//click on contact link
-	home.getcontactLink();
+	home.getcontactLink().click();
 	
 	//click on create plus button
 	home.getcreatePlusButton().click();
