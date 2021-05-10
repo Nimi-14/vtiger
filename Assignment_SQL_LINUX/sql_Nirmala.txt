@@ -1,0 +1,77 @@
+SubQueries
+
+
+1.Display details of emp who joined the company before 'smith' ?
+Ans select * from emp where hiredate<(select hiredate from emp where ename ='SMITH');
+
+
+2.Display details of emp who all working for deptno same as king?
+Ans Select * from emp where deptno=(select deptno from emp where ename='kING');
+
+
+3.Display details of emp who joined the company 1982 but working for the job same as Miller?
+Ans  Select * from emp where hiredate like '%81' and job=(select job from emp where ename='MILLER');
+
+
+4.Display details of emp who all are not earning comm but having the emp no. before scott emp no ?
+Ans select * from emp where comm ='null' and empno<(select empno from emp where ename='FORD');
+
+5. Display dept details for the emp who works for presdient?
+Ans > select * from dept where deptno in (select deptno from emp where job='PRESIDENT');
+
+
+6.Display dept_name ,loc for the emp who work as salesman but earning less than 1300 ?
+Ans SQL> select dname ,loc from dept where deptno in (select deptno from emp where job='SALESMAN' and sal<1300);
+
+7.Display dept details for the emp whose salary is more than scott?
+Ans. SQL> select * from dept where deptno in(select deptno from emp where sal>(select sal from emp where ename='SCOTT'));
+
+
+8.Display 2nd maximum sal from emp?
+Ans select min(sal) from emp where sal>(select min(sal) from emp);
+
+9.Display 2nd highest & 2nd least sal from emp?
+Ans  SQL> select max(sal) from emp where sal<(select max(sal) from emp)union (select min(sal) from emp where sal>(select min(sal) from emp));
+
+
+10.Display manager name for the emp ALLEN ?
+Ans  select ename from emp where empno=(select mgr from emp where ename='ALLEN');
+
+
+JOINS
+11.Display ename,desingantion ,loc for all the employees?
+Ans  SQL> select ename,job,dname ,loc from emp,dept where emp.deptno=dept.deptno;
+
+12.display ename ,sal along with deptname & loc for all emp's who are earning sal more than 2500?
+Ans  SQL> select ename,sal,dname ,loc from emp,dept where emp.deptno=dept.deptno and sal>2500;
+
+13.Display empname  along with dept details only of emp are reporting to manager no. 7839?
+Ans select ename,dept.* from emp,dept where emp.deptno=dept.deptno and mgr=7839;
+
+14.display ename,job,sal along with dname,loc for all emp's who is working as clerk for 'RESEARCH' dept?
+Ans select ename,job,sal ,dname ,loc from emp,dept where emp.deptno=dept.deptno and job='CLERK' and dname='RESEARCH';
+
+15.display ename,job along with grade only if emps are working as clerk?
+ans select ename,job,grade from emp ,salgrade where job='CLERK' and sal between losal and hisal;
+
+16.Display ename,sal,grade only if grade 3 emp.?
+ans  SQL> select ename,sal ,grade from emp,salgrade where grade=3;
+
+17.Display the ename where sal,job,loc & grade only if emp's contains excatly 5 characters?
+ans select ename,sal ,job,loc,grade from emp,locations,salgrade where ename like'_____' and sal between losal and hisal and emp.deptno=dept.deptno;
+
+18.Display ename ,dname for all emps & display the name of deptno emp are working?
+ans SQL> select ename,dname from dept,emp where emp.deptno(+)=dept.deptno;
+
+19.Display ename,mgr name togetherly to all emp?
+ans select a.ename as empname,b.ename as mgrname from emp a,emp b where a.mgr=b.empno;
+
+20.Display 5th minimun value sal from emp?
+ans SQL> select distinct sal from emp a where 5=(select count(distinct sal) from emp b where a.sal>=b.sal);
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+Assignment Linux
+
+1.Write shell script to find “error” message in serverlogafile.log  ?
+Ans:grep “error” logfile.log l sort l uniq -c
+
+
+2.Write shell script to ping the machine & check whether machine is UP or down  ?
+Ans : date >> /home/insight/scripts/lrkdc01ping.out
+cat /home/insight/scripts/lrkdc01.txt |  while read output
+do
+    ping -c 1 "$output" >> /dev/null
+    if [ $? -eq 0 ]; then
+        echo "node is up" >> /home/insight/scripts/lrkdc01ping.out
+    else
+        echo "node is down" >> /home/insight/scripts/lrkdc01ping.out
+    fi
+done
+
